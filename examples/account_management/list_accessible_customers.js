@@ -21,7 +21,7 @@ const client = new GoogleAdsClient({
   parseResults: true
 })
 
-async function main () {
+;(async function main () {
   // Load a Customer Service
   const service = client.getService('CustomerService')
 
@@ -31,11 +31,9 @@ async function main () {
   // Call the ListAccessibleCustomers method of the CustomerService (Note: Methods are camel case in this library)
   const response = await service.listAccessibleCustomers(request)
 
-  console.log('Total results:', Object.values(response.resourceNames).length)
+  console.log('Total results:', Object.values(response).length)
 
   Object.values(response.resourceNames).forEach(customerResourceName => {
-    console.log('Customer resource name:', customerResourceName)
+    console.log(`Customer resource name: '${customerResourceName}'`)
   })
-}
-
-main()
+})()

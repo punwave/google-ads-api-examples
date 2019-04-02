@@ -37,7 +37,7 @@ const { google } = require('googleapis')
   try {
     const { tokens } = await oauth2Client.getToken(code)
     console.log(`Your refresh token is: ${tokens.refresh_token}\n`)
-  } catch (err) {
-    console.error(err)
+  } catch (e) {
+    console.log(e)
   }
 })()

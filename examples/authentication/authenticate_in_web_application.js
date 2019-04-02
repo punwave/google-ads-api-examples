@@ -71,6 +71,6 @@ async function authenticate (oauth2Client, scopes) {
       console.log(`Your refresh token is: ${tokens.refresh_token}\n`)
     })
     .catch(err => {
-      console.error(err)
+      console.log(err)
     })
 })()

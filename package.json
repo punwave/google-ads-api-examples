@@ -8,6 +8,8 @@
     "google-ads-node": "^1.7.1",
     "googleapis": "^39.1.0",
     "inquirer": "^6.2.2",
+    "minimist": "^1.2.0",
+    "moment": "^2.24.0",
     "opn": "^6.0.0",
     "server-destroy": "^1.0.1"
   },
